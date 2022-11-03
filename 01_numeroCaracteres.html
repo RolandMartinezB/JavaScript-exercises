@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Ejercicios clase 35</h1>
+    <script>
+      // Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+
+      /*
+        const dato = function (str) {
+        let tipoDato = typeof str;
+        if (tipoDato === "number") {
+          console.log(
+            `El tipo de dato ingresado es ${tipoDato} y no un string`
+          );
+        } else if (tipoDato === "boolean") {
+          console.log(
+            `El tipo de dato ingresado es ${tipoDato} y no un string`
+          );
+        } else if (tipoDato === "object") {
+          console.log(
+            `El tipo de dato ingresado es ${tipoDato} y no un string`
+          );
+        } else if (tipoDato === "string") {
+          let tamano = str.length;
+          console.log(`la cadena de texto ${str} tiene ${tamano} caracteres`);
+        } else {
+          console.log(`El tipo de dato ingresado es Undefined y no un string`);
+        }
+        console.log(tipoDato);
+      };
+*/
+
+      const dato = function (str) {
+        console.log(str);
+        let tipoDato = typeof str;
+        console.log(tipoDato);
+        switch (tipoDato) {
+          case "object":
+            console.log(`el tipo de dato ${str} es un ${tipoDato} `);
+            break;
+          case "number":
+            console.log(`el tipo de dato ${str} es un ${tipoDato} `);
+            break;
+          case "boolean":
+            console.log(`el tipo de dato ${str} es un ${tipoDato} `);
+            break;
+          case "string":
+            console.log(`el tipo de dato es un ${tipoDato} `);
+            let tamano = str.length;
+            console.log(`la cadena de texto ${str} tiene ${tamano} caracteres`);
+            break;
+          default:
+            console.log("no definido");
+        }
+      };
+
+      //dato({ name: "Milton", lastname: "heladas", age: 35 });
+      //dato("Roland Martinez");
+      dato("5897652");
+    </script>
+  </body>
+</html>
