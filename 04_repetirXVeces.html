@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Repita un texto X veces</h1>
+    <script>
+      //4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+      const dato = function (cadena, cantidad) {
+        let repetir = cantidad,
+          texto = cadena,
+          validar = Math.sign(repetir);
+        if (validar === -1 || validar === 0 || isNaN(validar)) {
+          console.log(
+            "El numero de repeticiones no puede ser negativo, cero, cadena de texto u objeto"
+          );
+        } else {
+          console.log(texto.repeat(repetir));
+        }
+      };
+
+      dato("texto escrito ", 8);
+    </script>
+  </body>
+</html>
