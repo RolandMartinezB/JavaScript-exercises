@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <h1>03 String a Array</h1>
+  <body>
+    <script>
+      // Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+
+      const cadenaTexto = function (dato, separador) {
+        let texto = dato,
+          tipoDato = typeof texto,
+          comodin = separador;
+
+        console.log(tipoDato);
+        console.log(texto);
+        switch (tipoDato) {
+          case "string":
+            let newArray = texto.split(comodin);
+            console.log(`La cadena de texto es: ${texto}`);
+            console.log(
+              `El separador ingresado para la cadena de texto es: '${comodin}'`
+            );
+            console.log(newArray);
+            console.table(newArray);
+            break;
+          case "object":
+            //let newObj = Array.from(texto);
+            let newObj = JSON.stringify(texto);
+            console.log(newObj);
+            console.table(newObj);
+            break;
+          case "boolean":
+            console.log(
+              `el tipo de dato ${texto} es: ${tipoDato} y su separador es : ${comodin}, si desea convertir el valor Boolean a cadena de texto, puede utilizar el separador: '""', comilla doble. `
+            );
+            if (comodin === "") {
+              let texto1 = texto.toString();
+              texto2 = texto1.split(comodin);
+              console.log(
+                `Se conviente el dato Boolean ${texto} a cadena de texto ${texto2} .`
+              );
+              console.table(texto2);
+            } else {
+              console.log(`El separador ${comodin} no es valido.`);
+            }
+            break;
+          case "number":
+            console.log(texto);
+            console.log(
+              `el tipo de dato ${texto} es: ${tipoDato} y su separador es : ${comodin}, si desea convertir el dato ${tipoDato} a cadena de texto, por favor utilizar el separador: '""', comilla doble. `
+            );
+            if (comodin === "") {
+              let texto1 = texto.toString();
+              texto2 = texto1.split(comodin);
+              console.log(
+                `Se conviente el dato Boolean ${texto} a cadena de texto ${texto2} .`
+              );
+              console.table(texto2);
+            } else {
+              console.log(`El separador ${comodin} no es valido.`);
+            }
+            break;
+          default:
+            console.log("no definido");
+        }
+      };
+      //cadenaTexto("Hola soy una cadena de texto", " ");
+      //cadenaTexto({ name: "Roland", age: 35, city: "Quebec" }, ",");
+      //cadenaTexto('["abc", "123", 78, 90]', ",");
+      //cadenaTexto(["abc", "123", 78, 90], ",");
+      //cadenaTexto(true, "!");
+      cadenaTexto(365, "");
+    </script>
+  </body>
+</html>
