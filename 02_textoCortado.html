@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Texto cortado</h1>
+    <script>
+      // Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+      const texto = function (dato, numero) {
+        let tipoDato = typeof dato;
+        switch (tipoDato) {
+          case "object":
+            console.log(`el tipo de dato ${dato} es un ${tipoDato} `);
+            break;
+          case "number":
+            console.log(`el tipo de dato ${dato} es un ${tipoDato} `);
+            break;
+          case "boolean":
+            console.log(`el tipo de dato ${dato} es un ${tipoDato} `);
+            break;
+          case "string":
+            let tamanoDato = dato.length,
+              cantidad = numero,
+              newTexto = dato.substring(0, cantidad);
+            console.log(
+              `El texto original es: ${dato}. El texto recortado es: ${newTexto}. La cantidad de caracteres indicados es: ${cantidad} y la cantidad de caracteres del texto es: ${tamanoDato}`
+            );
+            break;
+          default:
+            console.log("no definido");
+        }
+      };
+
+      //texto("Veo tu alma envuelta en un mar de ilusiones", 100);
+      //texto({ name: "roland", age: 25 }, 10);
+      //texto([1, 2, 3, 4, 5, "a", "b"], 3);
+      texto(undefined, 5);
+    </script>
+  </body>
+</html>
